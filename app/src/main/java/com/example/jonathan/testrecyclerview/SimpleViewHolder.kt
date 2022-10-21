@@ -4,10 +4,20 @@ import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
+/*
+ * The ViewHolder class holds the RecyclerView item's view.
+ */
 class SimpleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    private var mSimpleTextView: TextView = itemView.findViewById(R.id.simple_text_view)
+    private var simpleTextView: TextView? = null
 
+    init {
+        simpleTextView = itemView.findViewById(R.id.simple_text_view)
+    }
+
+    /*
+     * This will be called by Adapter.onBindViewHolder().
+     */
     fun bindData(itemModel: SimpleItemModel) {
-        mSimpleTextView.text = itemModel.simpleText
+        simpleTextView!!.text = itemModel.simpleText
     }
 }
