@@ -5,21 +5,24 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
+/*
+ * This Adapter class adapts item models to RecyclerView.
+ */
 class SimpleAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    private var models: List<SimpleItemModel> = ArrayList()
+    private var models = ArrayList<SimpleItemModel>()
 
     constructor(itemModels: List<SimpleItemModel>) : this() {
-        models = itemModels
+        models = itemModels as ArrayList<SimpleItemModel>
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(viewType, parent, false)
+        val view: View = LayoutInflater.from(parent.context).inflate(
+            viewType, parent, false)
         return SimpleViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        val holder2 = holder as SimpleViewHolder
-        holder2.bindData(models[position])
+        (holder as SimpleViewHolder).bindData(models[position])
     }
 
     override fun getItemCount(): Int {
