@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 class SimpleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private var mSimpleTextView: TextView = itemView.findViewById(R.id.simple_text_view)
 
-    fun bindData(itemModel: ItemModel) {
+    fun bindData(itemModel: SimpleItemModel) {
         mSimpleTextView.text = itemModel.simpleText
     }
 }

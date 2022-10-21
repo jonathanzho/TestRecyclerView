@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 class SimpleAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    private var models: List<ItemModel> = ArrayList()
+    private var models: List<SimpleItemModel> = ArrayList()
 
-    constructor(itemModels: List<ItemModel>) : this() {
+    constructor(itemModels: List<SimpleItemModel>) : this() {
         models = itemModels
     }
 

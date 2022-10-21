@@ -18,11 +18,11 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
     }
 
-    private fun generateSimpleList(): List<ItemModel> {
-        val itemModelList: MutableList<ItemModel> = ArrayList();
+    private fun generateSimpleList(): List<SimpleItemModel> {
+        val itemModelList: MutableList<SimpleItemModel> = ArrayList();
 
         for (i in 0..99) {
-            itemModelList.add(ItemModel(String.format(Locale.US, "This is item, %d", i)))
+            itemModelList.add(SimpleItemModel(String.format(Locale.US, "This is item, %d", i)))
         }
 
         return itemModelList
