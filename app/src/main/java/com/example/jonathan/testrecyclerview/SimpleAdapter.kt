@@ -26,8 +26,10 @@ class SimpleAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         return models.size
     }
 
-    /* ??? This fun has to be manually added: */
+    /* (??? This fun has to be manually added.)
+     * Returns the layout resource ID to be used in Adapter.onCreateViewHolder().
+     */
     override fun getItemViewType(position: Int): Int {
-        return R.layout.item_in_recycler_view
+        return R.layout.item_recyclerview_main
     }
 }

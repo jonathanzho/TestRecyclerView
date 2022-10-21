@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- This is the item or card  layout that will be treated as an item for the list created by the
+RecyclerView.  -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="wrap_content"
@@ -6,8 +8,8 @@
   android:layout_margin="8dp">
 
     <TextView
-      android:id="@+id/simple_text"
+      android:id="@+id/simple_text_view"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      tools:text="This is some temp text" />
+      tools:text="initial text" />
 </FrameLayout>
