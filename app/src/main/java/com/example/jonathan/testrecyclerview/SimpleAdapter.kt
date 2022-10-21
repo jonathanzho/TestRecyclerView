@@ -9,10 +9,10 @@ import androidx.recyclerview.widget.RecyclerView
  * This Adapter class adapts item models to RecyclerView.
  */
 class SimpleAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    private var models = ArrayList<SimpleItemModel>()
+    private var itemModelList = ArrayList<SimpleItemModel>()
 
     constructor(itemModels: List<SimpleItemModel>) : this() {
-        models = itemModels as ArrayList<SimpleItemModel>
+        itemModelList = itemModels as ArrayList<SimpleItemModel>
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -22,11 +22,11 @@ class SimpleAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        (holder as SimpleViewHolder).bindData(models[position])
+        (holder as SimpleViewHolder).bindData(itemModelList[position])
     }
 
     override fun getItemCount(): Int {
-        return models.size
+        return itemModelList.size
     }
 
     /* (??? This fun has to be manually added.)

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Demo | RecyclerView</string>
+    <string name="initial_item_name">initial item name</string>
+    <string name="initial_item_age">initial item age</string>
 </resources>
