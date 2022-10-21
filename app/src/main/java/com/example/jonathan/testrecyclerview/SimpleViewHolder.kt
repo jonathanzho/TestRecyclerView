@@ -11,7 +11,7 @@ class SimpleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private var simpleTextView: TextView? = null
 
     init {
-        simpleTextView = itemView.findViewById(R.id.simple_text_view)
+        simpleTextView = itemView.findViewById(R.id.item_name_text_view)
     }
 
     /*

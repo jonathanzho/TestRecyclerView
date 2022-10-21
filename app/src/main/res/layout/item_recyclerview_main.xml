@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- This is the item or card  layout that will be treated as an item for the list created by the
 RecyclerView.  -->
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
-  android:layout_width="wrap_content"
+  android:layout_width="match_parent"
   android:layout_height="wrap_content"
   android:layout_margin="8dp">
 
     <TextView
-      android:id="@+id/simple_text_view"
-      android:layout_width="wrap_content"
+      android:id="@+id/item_name_text_view"
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      tools:text="initial text" />
-</FrameLayout>
+      android:textSize="25sp"
+      android:padding="8dp"
+      android:layout_marginStart="10dp"
+      tools:text="initial item name" />
+</RelativeLayout>
